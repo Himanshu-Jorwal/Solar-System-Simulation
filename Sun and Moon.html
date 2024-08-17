@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Simulation</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .sun {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(253, 233, 59);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mercury-orbit {
+            width: 270px;
+            height: 270px;
+            border: 0.5px dashed #f59a81;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 14.5s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .mercury {
+            width: 5px;
+            height: 5px;
+            background-color: rgb(255, 45, 45);
+            border-radius: 50%;
+            position: absolute;
+            top: -1%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .venus-orbit {
+            width: 460px;
+            height: 460px;
+            border: 1px dashed #ffd3b0;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 37s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .venus {
+            width: 18px;
+            height: 18px;
+            background-color: #df6500;
+            border-radius: 50%;
+            position: absolute;
+            top: -2%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .earth-orbit {
+            width: 650px;
+            height: 650px;
+            border: 1.25px dashed #00f9e8;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 60s linear infinite;             /* Standard : 1 Year = 1 Min */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .earth {
+            width: 20px;
+            height: 20px;
+            background-color: #0400f9;
+            border-radius: 50%;
+            position: absolute;
+            top: -1.5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .moon-orbit {
+            width: 75px;
+            height: 75px;
+            border: 0.5px dashed #8e99a0;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 4.5s linear infinite;              /* Not to Scale */
+            top: -140%;
+            left: -140%;
+            transform: translate(-50%, -50%);
+        }
+
+        .moon {
+            width: 4px;
+            height: 4px;
+            background-color: #dce5ea;
+            border-radius: 50%;
+            position: absolute;
+            top: -0.5%;
+            left: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .mars-orbit {
+            width: 910px;
+            height: 910px;
+            border: 1px dashed #ff5d5d;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 113s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .mars {
+            width: 10.5px;
+            height: 10.5px;
+            background-color:rgb(255, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            top: -0.6%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .phobos-orbit {
+            width: 20px;
+            height: 20px;
+            border: 0.25px dashed #fde2cc;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 0.5s linear infinite;
+            top: -55%;
+            left: -63%;
+            transform: translate(-50%, -50%);
+        }
+
+        .phobos {
+            width: 2px;
+            height: 2px;
+            background-color: #f1b381;
+            border-radius: 50%;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .deimos-orbit {
+            width: 30px;
+            height: 30px;
+            border: 0.25px dashed #c3926a;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 1s linear infinite;
+            top: -100%;
+            left: -120%;
+            transform: translate(-50%, -50%);
+        }
+
+        .deimos {
+            width: 3px;
+            height: 3px;
+            background-color: #c77e41;
+            border-radius: 50%;
+            position: absolute;
+            top: -1%;
+            left: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="mercury-orbit">
+        <div class="mercury"></div>
+    </div>
+    <div class="venus-orbit">
+        <div class="venus"></div>
+    </div>
+    <div class="earth-orbit">
+        <div class="earth">
+            <div class="moon-orbit">
+                <div class="moon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mars-orbit">
+        <div class="mars">
+            <div class="phobos-orbit">
+                <div class="phobos"></div>
+            </div>
+            <div class="deimos-orbit">
+                <div class="deimos"></div>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
